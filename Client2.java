@@ -4,7 +4,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.Scanner;
 
-public class clientUDP {
+public class Client2 {
     private static volatile boolean initialisationTerminee = false;
     private static volatile boolean connected = false;
     private static volatile int portCible = -1;
@@ -33,7 +33,7 @@ public class clientUDP {
             }
 
             // Lancer un thread pour écouter les messages entrants
-            Thread ecouteThread = new Thread(clientUDP::ecouter);
+            Thread ecouteThread = new Thread(Client2::ecouter);
             ecouteThread.start();
 
             // Boucle principale pour l'envoi des messages et des commandes
